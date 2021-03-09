@@ -22,36 +22,19 @@ app.post('/login',
   
     const { username, password } = req.body
     // Use username and password to create token.
-    if(req.body = 200){
-    return res.status(200).json({
-      message: 'Login succesfully';
-    })
-  }
-    if(req.body =! 200)
-     return res.status(400).json({
-       message : 'Invalid username or password';
-     })
-   }
 
+    return res.status(200).json({
+      message: 'Login succesfully',
+    })
   })
 
 app.post('/register',
   (req, res) => {
 
     const { username, password, firstname, lastname, balance } = req.body
-       return res.status(200).json({
-        message: 'Register successfully',
-     
-       })
-    if(req.body = 200)
-      return res.status(400).json({
-        message : 'Username is already in used',
-      })
-
     
-    
+    }
   })
-
 app.get('/balance',
   (req, res) => {
     const token = req.query.token as string
@@ -91,9 +74,8 @@ app.get('/me', (req, res) => {
     "firstname": "Patcharapon",
     "lastname" : "Manuspong",
     "code" : 620612158,
-    "gpa" : 4.00,
+    "gpa" :4.00
   }
-  )
 })
 
 app.get('/demo', (req, res) => {
