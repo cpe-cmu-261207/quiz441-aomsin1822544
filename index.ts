@@ -19,21 +19,37 @@ interface JWTPayload {
 
 app.post('/login',
   (req, res) => {
-  if()
+  
     const { username, password } = req.body
     // Use username and password to create token.
-
+    if(req.body = 200){
     return res.status(200).json({
-      message: 'Login succesfully',
+      message: 'Login succesfully';
     })
+  }
+    if(req.body =! 200)
+     return res.status(400).json({
+       message : 'Invalid username or password';
+     })
+   }
+
   })
 
 app.post('/register',
   (req, res) => {
 
     const { username, password, firstname, lastname, balance } = req.body
+       return res.status(200).json({
+        message: 'Register successfully',
+     
+       })
+    if(req.body = 200)
+      return res.status(400).json({
+        message : 'Username is already in used',
+      })
+
     
-    }
+    
   })
 
 app.get('/balance',
