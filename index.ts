@@ -19,7 +19,7 @@ interface JWTPayload {
 
 app.post('/login',
   (req, res) => {
-
+  if()
     const { username, password } = req.body
     // Use username and password to create token.
 
@@ -32,6 +32,8 @@ app.post('/register',
   (req, res) => {
 
     const { username, password, firstname, lastname, balance } = req.body
+    
+    }
   })
 
 app.get('/balance',
@@ -69,7 +71,13 @@ app.delete('/reset', (req, res) => {
 })
 
 app.get('/me', (req, res) => {
-  
+  res.send({
+    "firstname": "Patcharapon",
+    "lastname" : "Manuspong",
+    "code" : 620612158,
+    "gpa" : 4.00,
+  }
+  )
 })
 
 app.get('/demo', (req, res) => {
